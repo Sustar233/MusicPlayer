@@ -13,9 +13,11 @@ dist
 dist-ssr
 coverage
 *.local
+*.mp3
 
 /cypress/videos/
 /cypress/screenshots/
+static/music/
 
 # Editor directories and files
 .vscode/*

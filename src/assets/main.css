@@ -25,7 +25,8 @@ a,
   body {
     display: flex;
     place-items: center;
-    background-color: #216870;
+  background-image: url("/static/bg/bg1.png");
+
   }
 
   #app {
