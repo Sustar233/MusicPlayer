@@ -3,6 +3,8 @@ import MusicPlayer from './MusicPlayer/MusicPlayer.vue'
 </script>
 
 <template>
+  <link rel="stylesheet" href="./iconfont.css">
+
   <div class="bg">
 
     <header>
@@ -12,7 +14,6 @@ import MusicPlayer from './MusicPlayer/MusicPlayer.vue'
         <!-- 键盘控制播放功能 -->
 
         <!-- 背景设置为壁纸 -->
-        <!-- 组件通信实现点击列表切换歌曲-->
 
       </div>
     </header>

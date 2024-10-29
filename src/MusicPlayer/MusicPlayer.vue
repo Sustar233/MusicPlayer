@@ -38,6 +38,7 @@ import musicListDatas from '/static/music/songsList.json';
 console.log(musicListDatas);
 
 
+
 // const musicListDatas = [
 //   {
 //     title: '打上花火',
@@ -58,8 +59,11 @@ function playSong() {
   isPlay.value ? audio.value.pause() : audio.value.play()
   isPlay.value = !isPlay.value;
 }
+
+// 切换播放的歌曲
+// pre 上一首， next 下一首
+// 参数类型为number时按序号切换
 function changeSong(cmd) {
-  
   if (cmd === 'pre') {
     curIndex.value--
     if (curIndex.value < 0) curIndex.value = musicListDatas.length - 1
@@ -68,8 +72,6 @@ function changeSong(cmd) {
     curIndex.value = (curIndex.value + 1) % musicListDatas.length
   } else if (typeof cmd === 'number') {
     curIndex.value = cmd
-    console.log(curIndex);
-    
   }
   curMusic.value = musicListDatas[curIndex.value]
 
@@ -77,10 +79,10 @@ function changeSong(cmd) {
 
   isPlay.value = true
   nextTick(() => {
-    console.log('nextTick')
     audio.value.play();
   });
 }
+
 function updateProgress(e) {
   const { duration, currentTime } = e.target;
   const progressPercent = (currentTime / duration) * 100;
